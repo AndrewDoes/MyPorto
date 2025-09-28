@@ -1,0 +1,10 @@
+/* src/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add this to ensure your app can fill the screen height */
+html, body, #root {
+  height: 100%;
+}
