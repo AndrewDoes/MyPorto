@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/navbar'
 import Homepage from './pages/Homepage'
+import { Route, Routes } from 'react-router-dom'
+import AboutMePage from './pages/AboutMePage'
 
-function App() {
-  const [activePage, setActivePage] = useState('home');
 
+
+export default function App() {
   return (
     <>
       <div className='w-full min-h-screen bg-gray-800'>
-        <Navbar activePage={activePage} setActivePage={setActivePage} />
-        <Homepage setActivePage={setActivePage} />
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<Homepage />} />
+          <Route path='/about' element={<AboutMePage/>} />
+        </Routes>
       </div>
     </>
   )
 }
-
-export default App

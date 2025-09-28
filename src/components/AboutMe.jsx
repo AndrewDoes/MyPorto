@@ -12,7 +12,7 @@ export default function AboutMe() {
     return (
         <>
             <div className="h-full w-screen flex flex-col p-0">
-                <h1 className="text-6xl font-bold text-gray-600 p-0">About Me</h1>
+                <h1 className="text-2xl font-bold text-white p-5 m-auto">About Me</h1>
                 <div className="flex">
                     <div className="flex flex-col">
                         <img className="w-48 h-48 rounded-full" src={data[0].Image} alt="Profile Picture" />

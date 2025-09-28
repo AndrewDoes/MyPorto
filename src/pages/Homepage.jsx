@@ -1,5 +1,5 @@
 
-export default function Homepage({setActivePage}) {
+export default function Homepage() {
   return (
     <div className="h-full flex flex-col items-center justify-center p-0">
     </div>
