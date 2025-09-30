@@ -8,7 +8,7 @@ const education = [
 
 const EduCard = ({ Image, Name, Description }) => {
     return (
-        <div className="flex h-70 gap-10 border-2 border-white rounded-2xl py-4 px-10 items-center mt-10 bg-gray-800">
+        <div className="flex h-70 gap-10 border-2 border-white rounded-2xl py-4 px-10 items-center mt-10 mb-10 bg-gray-800">
             <img src="./src/assets/Binus-University.jpeg" alt="Binus University" className="rounded-full h-60 w-60" />
             <div className="flex h-full items-center">
                 <p className="text-white">
@@ -24,7 +24,7 @@ const EduCard = ({ Image, Name, Description }) => {
 export default function AboutMeEducation() {
     return (
         <div className="flex flex-col w-screen h-full px-30 space-y-4 shadow-lg justify-between items-center">
-            <h1 className="text-white text-3xl font-bold">Education</h1>
+            <h1 className="text-white text-3xl font-bold m-0">Education</h1>
             {education.map((edu, index) => (
                 <EduCard key={index} Image={edu.Image} Name={edu.Name} Description={edu.Description} />
             ))}

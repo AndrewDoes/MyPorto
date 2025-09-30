@@ -3,7 +3,8 @@ const data = [{
     Image: "./src/assets/Andrew.jpeg"
 }]
 
-export default function AboutMeCard() {
+export default function AboutMeCard({onNavigate}) {
+
     return (
         <>
             <div className="h-full w-screen flex flex-col p-0 mt-15">
@@ -17,7 +18,7 @@ export default function AboutMeCard() {
                         <button 
                         type="button" 
                         className="px-8 py-4 border-2 border-white rounded-xl bg-white text-lg w-80 transition-all duration-200 hover:bg-gray-950 hover:text-white"
-                        onClick={() => {window.location.href = "/project"}}>See my projects</button>
+                        onClick={() => onNavigate("projects")}>See my projects</button>
                     </div>
                 </div>
             </div>

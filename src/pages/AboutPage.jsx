@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import AboutMeCard from "../components/AboutMe/AboutMeCard";
-import AboutMeEducation from "../components/AboutMe/AboutMeEducation";
+import AboutMeEducation from "../components/AboutMeEducation";
+import AboutMeCard from "../components/AboutMeCard";
 
-export default function AboutMePage() {
+export default function AboutPage({onNavigate}) {
   const educationSectionRef = useRef(null);
 
   const handleScrollDown = () => {
@@ -12,8 +12,8 @@ export default function AboutMePage() {
   }
   return (
     <div className="h-full flex flex-col items-center justify-center p-0">
-      <AboutMeCard />
-      <h2 className="text-2xl font-bold text-white mt-20 mb-20 opacity-50 cursor-pointer" onClick={handleScrollDown}>v See more about me v</h2>
+      <AboutMeCard onNavigate={onNavigate}/>
+      <h2 className="text-2xl font-bold text-white my-20 opacity-50 cursor-pointer" onClick={handleScrollDown}>v See more about me v</h2>
       <div ref={educationSectionRef}>
         <AboutMeEducation />
       </div>
