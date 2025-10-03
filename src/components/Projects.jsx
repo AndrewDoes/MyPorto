@@ -1,5 +1,5 @@
 import hcilec from "../assets/HCIlec.png"
-import hcilab from "../assets/HCILab.png"
+import hcilab from "../assets/HCIlab.png"
 import cashierapp from "../assets/CashierApp.png"
 
 const projects = [
