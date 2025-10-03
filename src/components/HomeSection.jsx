@@ -1,6 +1,6 @@
 import Andrew from "../assets/Andrew2.jpeg"
 import { TypeAnimation } from "react-type-animation"
-import Github from "../assets/GitHub.png"
+import Github from "../assets/Github.png"
 import LinkedIn from "../assets/linkedin.png"
 import CV from "../assets/CV.png"
 
