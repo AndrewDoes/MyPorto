@@ -11,12 +11,12 @@ const education = [
 const EduCard = ({ Image, Name, Description }) => {
     return (
         <div className="flex h-70 gap-10 border-2 border-white rounded-2xl py-4 px-10 items-center mt-10 mb-10 bg-gray-800">
-            <img src="./src/assets/Binus-University.jpeg" alt="Binus University" className="rounded-full h-60 w-60" />
+            <img src={Image} alt="Binus University" className="rounded-full h-60 w-60" />
             <div className="flex h-full items-center">
                 <p className="text-white">
-                    Binus University (ALS), Tangerang, Banten
+                    {Name}
                     <br />
-                    Bachelor of Computer Science (2023 - 2027)
+                    {Description}
                 </p>
             </div>
         </div>
