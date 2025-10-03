@@ -1,6 +1,8 @@
+import Binus from "../assets/Binus-University.jpeg"
+
 const education = [
     {
-        Image: "./src/assets/Binus-University.jpeg",
+        Image: Binus,
         Name: "Binus University (ALS), Tangerang, Banten",
         Description: "Bachelor of Computer Science (2023 - 2027)"
     }

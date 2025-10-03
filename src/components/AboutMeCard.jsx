@@ -1,6 +1,8 @@
+import Andrew from "../assets/Andrew.jpeg"
+
 const data = [{
     Name: "Nicholas Andrew Sutiono",
-    Image: "./src/assets/Andrew.jpeg"
+    Image: Andrew
 }]
 
 export default function AboutMeCard({onNavigate}) {

@@ -1,3 +1,5 @@
+import Andrew from "../assets/Andrew2.jpeg"
+
 export default function Homesection() {
   return (
     <div className="flex w-screen h-screen">
@@ -10,7 +12,7 @@ export default function Homesection() {
         </div>
       </div>
       <div className="flex-1 flex justify-center items-center">
-        <img src="./src/assets/Andrew2.jpeg" alt="Me" className="h-100  rounded-full"/>
+        <img src={Andrew} alt="Me" className="h-100  rounded-full"/>
       </div>
     </div>
 
