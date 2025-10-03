@@ -4,6 +4,7 @@ import Navbar from './components/navbar'
 import Homesection from './components/HomeSection'
 import AboutPage from './pages/AboutPage';
 import Skills from './components/Skills';
+import Projects from './components/Projects';
 
 
 
@@ -30,7 +31,7 @@ export default function App() {
         <div ref={homeRef}><Homesection/></div>
         <div ref={aboutRef}><AboutPage/></div>
         <div ref={skillsRef}><Skills/> </div>
-        <div ref={projectRef}>Project</div>
+        <div ref={projectRef}><Projects/></div>
         <div ref={contactRef}>Contact</div>
       </div>
     </>
