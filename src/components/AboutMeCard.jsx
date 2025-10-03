@@ -20,7 +20,7 @@ export default function AboutMeCard({onNavigate}) {
                         <button 
                         type="button" 
                         className="px-8 py-4 border-2 border-white rounded-xl bg-white text-lg w-80 transition-all duration-200 hover:bg-gray-950 hover:text-white"
-                        onClick={() => onNavigate("projects")}>See my projects</button>
+                        onClick={() => onNavigate("project")}>See my projects</button>
                     </div>
                 </div>
             </div>

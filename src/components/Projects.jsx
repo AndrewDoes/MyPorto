@@ -28,13 +28,19 @@ const projects = [
 
 const ProjectCards = ({ id, title, description, image, link }) => {
     return (
-        <div className="w-80 h-120 rounded-xl p-5 flex flex-col gap-4 items-center bg-gray-700 shadow-lg transition-transform duration-300 hover:scale-105" onClick={() => window.location.href = link}>
-            <div className="w-full h-40 mb-2 rounded-md overflow-hidden">
+        <div className="w-80 h-80 rounded-xl p-5 flex flex-col gap-4 items-center group bg-gray-700 shadow-lg transition-transform duration-300 hover:scale-105" onClick={() => window.location.href = link}>
+            <div className="relative w-full h-40 mb-2 rounded-md overflow-hidden">
                 <img src={image} alt={title} className="w-full h-full" />
             </div>
-            <h1 className="text-indigo-300 text-xl font-bold text-center h-20 flex items-center">{title}</h1>
-            <p className="text-white text-sm text-center h-32 overflow-hidden">{description}</p>
-            <a href={link} target="_blank" rel="noopener noreferrer" className="text-indigo-400 text-md font-normal">Click to Visit</a>
+            <h1 className="text-white text-xl font-bold text-center h-20 flex items-center">{title}</h1>
+            <div
+                className="absolute inset-0 flex items-center justify-center p-4 bg-gray-700 rounded-xl bg-opacity-70 
+                               text-center text-white 
+                               -z-100 opacity-0 group-hover:opacity-100 group-hover:z-10 
+                               transition-opacity duration-300"
+            >
+                <p className="text-sm">{description}</p>
+            </div>
             <p className=" text-sm font-extralight text-indigo-400">{id}</p>
         </div>
     )

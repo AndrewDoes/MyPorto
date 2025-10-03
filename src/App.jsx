@@ -28,8 +28,8 @@ export default function App() {
       <div className='w-full min-h-screen  overflow-x-hidden fixed top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-gray-800 to-black'>
         <Navbar onNavigate={handleScrollSection}/>
         {/* <div className="h-25"></div> */}
-        <div ref={homeRef}><Homesection/></div>
-        <div ref={aboutRef}><AboutPage/></div>
+        <div ref={homeRef}><Homesection onNavigate={handleScrollSection}/></div>
+        <div ref={aboutRef}><AboutPage onNavigate={handleScrollSection}/></div>
         <div ref={skillsRef}><Skills/> </div>
         <div ref={projectRef}><Projects/></div>
         <div ref={contactRef}>Contact</div>
