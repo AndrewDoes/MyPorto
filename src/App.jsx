@@ -1,8 +1,9 @@
 import { useRef } from 'react'
 import './App.css'
 import Navbar from './components/navbar'
-import Homepage from './pages/Homepage'
+import Homesection from './components/HomeSection'
 import AboutPage from './pages/AboutPage';
+import Skills from './components/Skills';
 
 
 
@@ -23,12 +24,12 @@ export default function App() {
 
   return (
     <>
-      <div className='w-full min-h-screen  overflow-x-hidden'>
+      <div className='w-full min-h-screen  overflow-x-hidden fixed top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-gray-800 to-black'>
         <Navbar onNavigate={handleScrollSection}/>
-        <div className="h-25"></div>
-        <div ref={homeRef}><Homepage/></div>
+        {/* <div className="h-25"></div> */}
+        <div ref={homeRef}><Homesection/></div>
         <div ref={aboutRef}><AboutPage/></div>
-        <div ref={skillsRef}>Skills</div>
+        <div ref={skillsRef}><Skills/> </div>
         <div ref={projectRef}>Project</div>
         <div ref={contactRef}>Contact</div>
       </div>

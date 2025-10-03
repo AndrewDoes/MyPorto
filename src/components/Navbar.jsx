@@ -22,9 +22,9 @@ const NavItem = ({ sectionId, name, onNavigate }) => {
 }
 export default function Navbar({onNavigate}){
     return(
-        <nav className="fixed w-full top-0 left-0 right-0 bg-opacity-80 z-40 flex justify-between px-10 py-5">
+        <nav className="fixed w-full top-0 left-0 right-0 bg-opacity-80 z-40 flex justify-between px-10 py-5 bg-gradient-to-r from-gray-800 to-black">
             <div className="text-white flex items-center">
-                <h1 className="text-3xl font-bold items-center">My Web Porto</h1>
+                <h1 className="text-5xl items-center font-mono font-extralight">AndrewDoes.com</h1>
             </div>
             <div className="justify-evenly flex items-center py-0 space-x-2 md:space-x-4">
                 {navLinks.map(link => (
