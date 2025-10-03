@@ -46,7 +46,7 @@ export default function Homesection({ onNavigate }) {
             2000, // wait 1s
             'A Software Engineer',
             2000, // wait 1s
-            'A Data Analyst',
+            'A Web Programmer',
             2000,
             'A Lifelong Learner',
             2000,
