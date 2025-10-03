@@ -8,6 +8,7 @@ const projects = [
         title: "Human Computer Interaction (LEC)",
         description: "A project that I made for Human Computer Interaction (LEC) course at Binus University to introduce myself to native web developing with HTML, CSS, and JS with a focus on user experience and user interface design.",
         image: hcilec,
+        language: ["HTML", "CSS", "JS"],
         link: "https://hci-project-lec.vercel.app/"
     },
     {
@@ -15,6 +16,7 @@ const projects = [
         title: "Human Computer Interaction (LAB)",
         description: "A project to further develop my understanding of web development with HTML, CSS, and JS with a focus on responsiveness and functionality",
         image: hcilab,
+        language: ["HTML", "CSS", "JS"],
         link: "https://hci-project-lab.vercel.app/"
     },
     {
@@ -22,6 +24,7 @@ const projects = [
         title: "Next.js Cashier Program",
         description: "Self-initiated cashier program with Next.js and Firebase",
         image: cashierapp,
+        language: ["Next.js", "Firebase"],
         link: "https://nextjs-cashier-program.vercel.app/"
     }
 ]
@@ -41,7 +44,7 @@ const ProjectCards = ({ id, title, description, image, link }) => {
             >
                 <p className="text-sm">{description}</p>
             </div>
-            <p className=" text-sm font-extralight text-indigo-400">{id}</p>
+            <p className=" text-sm font-mono text-indigo-400">{projects[id - 1].language.join(", ")}</p>
         </div>
     )
 }
