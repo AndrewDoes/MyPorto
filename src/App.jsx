@@ -1,10 +1,11 @@
 import { useRef } from 'react'
 import './App.css'
-import Navbar from './components/navbar'
+// import Navbar from './components/Navbar'
 import Homesection from './components/HomeSection'
 import AboutPage from './pages/AboutPage';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Navbar from './components/Navbar.jsx';
 
 
 
