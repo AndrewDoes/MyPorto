@@ -13,8 +13,7 @@ export default function AboutPage({onNavigate}) {
   return (
     <div className="h-full flex flex-col items-center justify-center p-0">
       <AboutMeCard onNavigate={onNavigate}/>
-      <h2 className="text-2xl font-bold text-white my-20 opacity-50 cursor-pointer" onClick={handleScrollDown}>v See more about me v</h2>
-      <div ref={educationSectionRef}>
+      <div className="mt-40" ref={educationSectionRef}>
         <AboutMeEducation />
       </div>
     </div>
