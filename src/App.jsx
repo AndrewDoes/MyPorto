@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import './App.css'
-// import Navbar from './components/Navbar'
 import Homesection from './components/HomeSection'
 import AboutPage from './pages/AboutPage';
 import Skills from './components/Skills';
