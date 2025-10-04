@@ -1,6 +1,8 @@
 import hcilec from "../assets/HCIlec.png"
 import hcilab from "../assets/HCIlab.png"
 import cashierapp from "../assets/CashierApp.png"
+import React, { useState } from 'react';
+import ReactCardFlip from 'react-card-flip';
 
 const projects = [
     {
@@ -29,32 +31,53 @@ const projects = [
     }
 ]
 
-const ProjectCards = ({ id, title, description, image, link }) => {
+const ProjectCards = ({ title, description, image, link }) => {
+    const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleFlip = (e) => {
+        e.preventDefault();
+        setIsFlipped(!isFlipped);
+    };
+
     return (
-        <div className="w-80 h-80 rounded-xl p-5 flex flex-col gap-4 items-center group bg-gray-700 shadow-lg transition-transform duration-300 hover:scale-105" onClick={() => window.location.href = link}>
-            <div className="relative w-full h-40 mb-2 rounded-md overflow-hidden">
-                <img src={image} alt={title} className="w-full h-full" />
-            </div>
-            <h1 className="text-white text-xl font-bold text-center h-20 flex items-center">{title}</h1>
-            <div
-                className="absolute inset-0 flex items-center justify-center p-4 bg-gray-700 rounded-xl bg-opacity-70 
-                               text-center text-white 
-                               -z-100 opacity-0 group-hover:opacity-100 group-hover:z-10 
-                               transition-opacity duration-300"
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
+            <div 
+                className="w-80 h-96 rounded-xl bg-gray-700 shadow-lg flex flex-col justify-center items-center p-6 cursor-pointer"
+                onClick={handleFlip}
             >
-                <p className="text-sm">{description}</p>
+                <div className="w-full h-48 mb-4 rounded-md overflow-hidden">
+                    <img src={image} alt={title} className="w-full h-full object-cover" />
+                </div>
+                <h1 className="text-indigo-300 text-xl font-bold text-center">{title}</h1>
+                <p className="text-white text-sm mt-2">Click to flip</p>
             </div>
-            <p className=" text-sm font-mono text-indigo-400">{projects[id - 1].language.join(", ")}</p>
-        </div>
-    )
+            <div 
+                className="w-80 h-96 rounded-xl bg-gray-800 shadow-lg flex flex-col justify-between items-center p-6 cursor-pointer"
+                onClick={handleFlip}
+            >
+                <h2 className="text-indigo-300 text-xl font-bold text-center">{title}</h2>
+                <p className="text-white text-md text-center flex-grow flex items-center">{description}</p>
+                <a 
+                    href={link} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full text-center bg-indigo-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-indigo-500 transition-colors"
+                >
+                    Visit Project
+                </a>
+            </div>
+        </ReactCardFlip>
+    );
 }
+
+// ... your main Projects component that maps over the data
 
 export default function Projects() {
     return (
-        <div className="flex flex-col w-screen">
-            <h1 className="text-white text-4xl font-bold m-0 text-center mb-12">Projects</h1>
+        <div className="flex flex-col w-screen py-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-15 text-center">Projects</h1>
             <div className="flex w-screen h-full px-60 justify-between items-center">
-                {projects.map(project => <ProjectCards key={project.id} id={project.id} title={project.title} description={project.description} image={project.image} link={project.link} />)}
+                {projects.map(project => <ProjectCards key={project.id} id={project.id} title={project.title} description={project.description} image={project.image} link={project.link}/>)}
             </div>
         </div>
     )

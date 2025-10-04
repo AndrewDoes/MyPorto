@@ -5,6 +5,8 @@ import AboutPage from './pages/AboutPage';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Navbar from './components/Navbar.jsx';
+import AboutMeCard from './components/AboutMeCard.jsx';
+import AboutMeEducation from './components/AboutMeEducation.jsx';
 
 
 
@@ -29,7 +31,8 @@ export default function App() {
         <Navbar onNavigate={handleScrollSection}/>
         {/* <div className="h-25"></div> */}
         <div ref={homeRef}><Homesection onNavigate={handleScrollSection}/></div>
-        <div ref={aboutRef}><AboutPage onNavigate={handleScrollSection}/></div>
+        <div ref={aboutRef} className='py-20'><AboutMeCard onNavigate={handleScrollSection}/></div>
+        <div className=""><AboutMeEducation/></div>
         <div ref={skillsRef}><Skills/> </div>
         <div ref={projectRef}><Projects/></div>
         <div ref={contactRef}>Contact</div>

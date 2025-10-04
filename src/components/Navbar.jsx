@@ -23,7 +23,7 @@ const NavItem = ({ sectionId, name, onNavigate }) => {
 }
 export default function Navbar({onNavigate}){
     return(
-        <nav className="fixed w-full top-0 left-0 right-0 bg-opacity-80 z-40 flex justify-between px-10 py-5 bg-gradient-to-r from-gray-800 to-black">
+        <nav className="fixed w-full top-0 left-0 right-0 bg-opacity-80 z-40 flex justify-between px-20 py-5 bg-gradient-to-r from-gray-800 to-black">
             <div className="text-white flex items-center gap-2 cursor-pointer" onClick={() => onNavigate("home")}>
                 <h1 className="text-5xl items-center font-mono font-extralight">Andrew<span className="text-indigo-400">Does</span>.com</h1>
                 <img src={logo} alt="Logo" className="w-15 h-15"/>

@@ -31,8 +31,8 @@ const EduCard = ({ Image, Name, Description }) => {
 
 export default function AboutMeEducation() {
     return (
-        <div className="flex flex-col w-screen h-full px-30 space-y-4 justify-between items-center">
-            <h1 className="text-white text-4xl font-bold m-0 mb-12">Education</h1>
+        <div className="flex flex-col w-screen h-full px-30 space-y-4 justify-between items-center py-20">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">Education</h1>
             {education.map((edu, index) => (
                 <EduCard key={index} Image={edu.Image} Name={edu.Name} Description={edu.Description} />
 
