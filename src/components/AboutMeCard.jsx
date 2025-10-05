@@ -18,7 +18,7 @@ export default function AboutMeCard({ onNavigate }) {
                         <p className="text-xl w-200 text-white">I am a Binus University undergraduate majoring in Computer Science since 2023 and plan to graduate in 2027. I am passionate about programming and web developing. In my major, I took a specialization in Software Development in pursue of my dream to become a project manager or analyst.</p>
                         <button
                             type="button"
-                            className="px-8 py-4 border-2 border-white rounded-xl bg-white text-lg w-80 transition-all duration-200 hover:bg-gray-950 hover:text-white"
+                            className="px-8 py-4 border-2 border-white rounded-xl bg-white text-lg w-80 transition-all duration-200 hover:scale-105 hover:bg-indigo-400 hover:text-white"
                             onClick={() => onNavigate("project")}>See my projects</button>
                     </div>
                 </div>

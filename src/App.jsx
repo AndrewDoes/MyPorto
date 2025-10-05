@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Navbar from './components/Navbar.jsx';
 import AboutMeCard from './components/AboutMeCard.jsx';
 import AboutMeEducation from './components/AboutMeEducation.jsx';
+import Contact from './components/Contact.jsx';
 
 
 
@@ -35,7 +36,7 @@ export default function App() {
         <div className=""><AboutMeEducation/></div>
         <div ref={skillsRef}><Skills/> </div>
         <div ref={projectRef}><Projects/></div>
-        <div ref={contactRef}>Contact</div>
+        <div ref={contactRef}><Contact/></div>
       </div>
     </>
   )
