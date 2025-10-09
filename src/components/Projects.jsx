@@ -76,7 +76,7 @@ const ProjectCards = ({ title, description, image, link }) => {
 export default function Projects() {
     return (
         <div className="flex flex-col w-screen py-40">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-15 text-center">Projects</h1>
+            <h1 className="text-4xl font-bold text-white mb-4 text-center">Projects</h1>
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-5 w-screen h-full px-10 md:px-0 xl:px-60 justify-evenly items-center">
                 {projects.map(project => <ProjectCards key={project.id} id={project.id} title={project.title} description={project.description} image={project.image} link={project.link}/>)}
             </div>

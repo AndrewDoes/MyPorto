@@ -9,7 +9,7 @@ export default function AboutMeCard({ onNavigate }) {
     return (
         <>
             <div className="h-full w-screen flex flex-col p-0 my-15 py-20">
-                <h1 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">About Me</h1>
+                <h1 className="text-4xl font-bold text-white mb-4 text-center">About Me</h1>
                 <div className="flex flex-col gap-10 xl:flex-row w-parent justify-between xl:px-30 items-center">
                     <div className="flex flex-col">
                         <img className="w-60 h-60 flex-1 md:w-100 md:h-100 rounded-full" src={data[0].Image} alt="Profile Picture" />

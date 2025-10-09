@@ -4,3 +4,9 @@
 html, body, #root {
   height: 100%;
 }
+
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #1d094d #838383;
+  scroll-behavior: smooth;
+}
