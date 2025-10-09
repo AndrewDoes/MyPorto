@@ -43,7 +43,7 @@ const SkillCard = ({ image, name, level }) => {
 
 export default function SkillsPage(){
     return (
-        <div className="min-h-screen w-full flex flex-col items-center justify-center px-4 md:px-10 py-20">
+        <div className="min-h-screen w-full flex flex-col items-center justify-center px-4 md:px-10 py-40">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-12">My Tech Stack</h1>
 
             <div className="w-full max-w-5xl space-y-12">

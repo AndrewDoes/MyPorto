@@ -61,7 +61,7 @@ export default function Homesection({ onNavigate }) {
             <button
               key={button.name}
               type="button"
-              className="px-8 py-4 gap-5 border-2 border-white text-gray-950 rounded-xl bg-white text-lg w-60 transition-all duration-200 hover:bg-indigo-400 hover:text-white"
+              className="px-8 py-4 gap-5 border-1 border-white text-gray-950 rounded-xl bg-white text-lg w-60 transition-all duration-200 hover:bg-indigo-400 hover:text-white"
               onClick={() => window.location.href = button.link}
             >
               <img src={button.icon} alt={button.name} className="w-8 h-8 mr-2 inline rounded-full overflow-hidden object-contain" />
@@ -72,7 +72,7 @@ export default function Homesection({ onNavigate }) {
             <button
               key={button.name}
               type="button"
-              className="px-8 py-4 border-2 border-white text-white rounded-xl bg-transparent text-lg w-60 transition-all duration-200 hover:bg-white hover:text-gray-950"
+              className="px-8 py-4 border-1 border-white text-white rounded-xl bg-transparent text-lg w-60 transition-all duration-200 hover:bg-white hover:text-gray-950"
               onClick={() => onNavigate(button.link)}
             >
               {button.name}
@@ -81,7 +81,7 @@ export default function Homesection({ onNavigate }) {
         </div>
       </div>
       <div className="flex-1 flex justify-center items-center px-20">
-        <img src={Andrew} alt="Me" className="h-96 object-cover rounded-full border-5 border-gray-100" />
+        <img src={Andrew} alt="Me" className="h-96 object-cover rounded-4xl border-3 border-gray-100" />
       </div>
     </div>
 
