@@ -42,7 +42,7 @@ const ProjectCards = ({ title, description, image, link }) => {
     return (
         <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
             <div 
-                className="w-80 h-96 rounded-xl bg-gray-700 shadow-lg flex flex-col justify-center items-center p-6 cursor-pointer"
+                className="w-60 h-96 md:w-100 xl:w-80 rounded-xl bg-gray-700 shadow-lg flex flex-col justify-center items-center p-6 cursor-pointer"
                 onClick={handleFlip}
             >
                 <div className="w-full h-48 mb-4 rounded-md overflow-hidden">
@@ -52,7 +52,7 @@ const ProjectCards = ({ title, description, image, link }) => {
                 <p className="text-white text-sm mt-2">Click to flip</p>
             </div>
             <div 
-                className="w-80 h-96 rounded-xl bg-gray-800 shadow-lg flex flex-col justify-between items-center p-6 cursor-pointer"
+                className="w-60 h-96 md:w-100 xl:w-80 rounded-xl bg-gray-800 shadow-lg flex flex-col justify-center items-center p-6 cursor-pointer"
                 onClick={handleFlip}
             >
                 <h2 className="text-indigo-300 text-xl font-bold text-center">{title}</h2>
@@ -77,7 +77,7 @@ export default function Projects() {
     return (
         <div className="flex flex-col w-screen py-40">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-15 text-center">Projects</h1>
-            <div className="flex w-screen h-full px-60 justify-between items-center">
+            <div className="flex flex-col lg:flex-row gap-10 lg:gap-5 w-screen h-full px-10 md:px-0 xl:px-60 justify-evenly items-center">
                 {projects.map(project => <ProjectCards key={project.id} id={project.id} title={project.title} description={project.description} image={project.image} link={project.link}/>)}
             </div>
         </div>
